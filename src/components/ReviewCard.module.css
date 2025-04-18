@@ -1,0 +1,50 @@
+.card {
+	background-color: #0b0b0b;
+	border-radius: 15px;
+	padding: 1.5rem;
+	color: white;
+	margin-bottom: 1.5rem;
+	/* border: 1px solid #333; */
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	flex-wrap: wrap;
+}
+
+.username {
+	font-size: 1.2rem;
+	margin: 0;
+}
+
+.starContainer {
+	display: flex;
+	gap: 5px;
+}
+
+.star {
+	font-size: 1.4rem;
+}
+
+.filled {
+	color: #ffc107;
+}
+
+.empty {
+	color: #555;
+}
+
+.comment {
+	font-size: 1rem;
+	line-height: 1.6;
+	margin: 0;
+}

@@ -1,0 +1,125 @@
+.formContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #000000;
+	padding: 20px;
+}
+
+.form {
+	width: 100%;
+	max-width: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: transparent;
+	border: 1px solid #1a1a1a;
+	border-radius: 10px;
+	padding: 24px;
+	color: white;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.formTitle {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: underline;
+	padding-bottom: 10px;
+}
+
+.formGroup {
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.label {
+	display: block;
+	margin-bottom: 12px;
+	font-size: 1rem;
+}
+
+.input,
+.textarea {
+	width: 100%;
+	padding: 12px;
+	background-color: transparent;
+	border: 1px solid #2a2a2a;
+	outline: none;
+	resize: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.9rem;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+	color: #777;
+}
+
+.textarea {
+	min-height: 100px;
+}
+
+.starRating {
+	display: flex;
+	gap: 10px;
+}
+
+.star {
+	font-size: 2rem;
+	cursor: pointer;
+	color: #444;
+	transition: color 0.2s ease;
+}
+
+.star:hover,
+.filled {
+	color: #ffc107;
+}
+
+.charCount {
+	text-align: right;
+	font-size: 0.8rem;
+	color: white;
+	margin-top: 5px;
+}
+
+.submitButton {
+	width: 100%;
+	max-width: 420px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 12px;
+	color: white;
+	background-color: transparent;
+	border: 1px solid #333;
+	border-radius: 10px;
+	font-size: 1rem;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+	background-color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+	.form {
+		padding: 20px;
+	}
+
+	.formTitle {
+		font-size: 1.5rem;
+	}
+
+	.star {
+		font-size: 1.7rem;
+	}
+}
