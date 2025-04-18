@@ -33,10 +33,26 @@
 
 .star {
 	font-size: 1.4rem;
+	position: relative;
 }
 
 .filled {
 	color: #ffc107;
+}
+
+.half {
+	color: #ffc107;
+	position: relative;
+}
+
+.half::after {
+	content: '★';
+	position: absolute;
+	transform: rotateY(180deg);
+	left: 50%;
+	width: 50%;
+	overflow: hidden;
+	color: #555;
 }
 
 .empty {

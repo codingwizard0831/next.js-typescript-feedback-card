@@ -10,7 +10,13 @@ type ReviewCardProps = {
 const ReviewCard: React.FC<ReviewCardProps> = ({ username, rating, comment }) => {
   // Generate an array of 5 stars, filled based on the rating
   const stars = Array.from({ length: 5 }, (_, index) => {
-    return index < rating ? 'filled' : 'empty';
+    const starValue = index + 1;
+    if (rating >= starValue) {
+      return 'filled';
+    } else if (rating >= starValue - 0.5) {
+      return 'half';
+    }
+    return 'empty';
   });
 
   return (
@@ -21,9 +27,9 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ username, rating, comment }) =>
           {stars.map((type, index) => (
             <span 
               key={index} 
-              className={`${styles.star} ${type === 'filled' ? styles.filled : styles.empty}`}
+              className={`${styles.star} ${styles[type]}`}
             >
-              ★
+              {type === 'half' ? '★' : '★'}
             </span>
           ))}
         </div>

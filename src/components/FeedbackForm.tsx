@@ -13,6 +13,10 @@ const FeedbackForm: React.FC = () => {
 		setCharCount(text.length);
 	};
 
+	const handleStarClick = (starValue: number, isHalf: boolean) => {
+		setRating(isHalf ? starValue - 0.5 : starValue);
+	};
+
 	const handleSubmit = (e: React.FormEvent) => {
 		e.preventDefault();
 
@@ -57,13 +61,20 @@ const FeedbackForm: React.FC = () => {
 					<label className={styles.label}>How did you like our service?</label>
 					<div className={styles.starRating}>
 						{[1, 2, 3, 4, 5].map((star) => (
-							<span
-								key={star}
-								className={`${styles.star} ${rating >= star ? styles.filled : ''}`}
-								onClick={() => setRating(star)}
-							>
-								★
-							</span>
+							<div key={star} className={styles.starContainer}>
+								<span
+									className={`${styles.star} ${rating >= star ? styles.filled : ''}`}
+									onClick={() => handleStarClick(star, false)}
+								>
+									★
+								</span>
+								<span
+									className={`${styles.star} ${rating >= star - 0.5 ? styles.filled : ''} ${styles.half}`}
+									onClick={() => handleStarClick(star, true)}
+								>
+									★
+								</span>
+							</div>
 						))}
 					</div>
 				</div>

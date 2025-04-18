@@ -22,7 +22,7 @@ const mockReviews: Review[] = [
   {
     id: '2',
     username: 'TechEnthusiast',
-    rating: 4,
+    rating: 4.5,
     comment: 'Great experience overall. The application is intuitive and responsive. A few minor issues but nothing that affected my workflow significantly.',
   },
   {
@@ -34,7 +34,7 @@ const mockReviews: Review[] = [
   {
     id: '4',
     username: 'BusyBee',
-    rating: 3,
+    rating: 2.5,
     comment: 'Decent service but room for improvement. Response times could be faster and some features were not as straightforward as I would have liked.',
   },
   {
