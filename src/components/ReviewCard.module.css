@@ -1,5 +1,6 @@
 .card {
-	background-color: #0b0b0b;
+	background-color: #0b0b0b90;
+	backdrop-filter: blur(10px);
 	border-radius: 15px;
 	padding: 1.5rem;
 	color: white;
